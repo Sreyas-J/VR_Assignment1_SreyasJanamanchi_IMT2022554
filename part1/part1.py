@@ -32,11 +32,11 @@ def binImg(img):# Convert the resized image to grayscale
     binary_img = cv2.adaptiveThreshold(
         blurred, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 11, 2
     )
+    # _, binary_img = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
 
     kernel = np.ones((3, 3), np.uint8)
     # Apply morphological closing to fill small gaps in the binary image
     closed = cv2.morphologyEx(binary_img, cv2.MORPH_CLOSE, kernel, iterations=2)
-
     return closed
 
 
@@ -70,8 +70,6 @@ def drawContours(img,circular_shapes):
     result_img = img.copy()
     # Create a blank mask
     mask_layer = np.zeros(result_img.shape[:2], dtype=np.uint8)
-    # mask_3ch = cv2.cvtColor(mask_layer, cv2.COLOR_GRAY2BGR)
-    # masked_result = cv2.bitwise_and(img, mask_3ch)
     
     # Fill detected circular shapes in the mask
     cv2.drawContours(mask_layer, circular_shapes, -1, 255, thickness=cv2.FILLED)

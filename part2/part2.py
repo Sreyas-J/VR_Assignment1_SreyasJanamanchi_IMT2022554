@@ -37,7 +37,7 @@ def detectKP(img):
     return kps, features
 
 
-def matchKP(kpA, kpB, fA, fB, ratio, re_proj):
+def matchKP(kpA, kpB, fA, fB, ratio):
     # Create a brute-force matcher
     matcher = cv2.BFMatcher()
 
@@ -57,7 +57,7 @@ def matchKP(kpA, kpB, fA, fB, ratio, re_proj):
         pB = np.float32([kpB[i] for (i, _) in matches])  
 
         # Compute homography matrix using RANSAC
-        H, status = cv2.findHomography(pA, pB, cv2.RANSAC, re_proj)
+        H, status = cv2.findHomography(pA, pB, cv2.LMEDS)
         return matches, H, status
     
     return None
@@ -91,7 +91,7 @@ def stitch(imgA, imgB, ratio=0.6, re_proj=3.0):
     kpB, fB = detectKP(imgB)
 
     # Match keypoints between the two images
-    M = matchKP(kpA, kpB, fA, fB, ratio, re_proj)
+    M = matchKP(kpA, kpB, fA, fB, ratio)
 
     if M is None:
         print("Insufficient matches found")
