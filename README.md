@@ -12,7 +12,7 @@ The objective of this task is to create a stitched panorama from multiple overla
 
 ## Documentation
 
-[Documentation](https://github.com/Sreyas-J/VRassignment1/blob/main/Assignment1Report.pdf)
+[Documentation](https://github.com/Sreyas-J/VR_Assignment1_SreyasJanamanchi_IMT2022554/blob/main/Assignment1Report.pdf)
 
 ```bash
 VRassignment1/
