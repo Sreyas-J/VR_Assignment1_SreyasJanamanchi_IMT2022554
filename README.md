@@ -12,7 +12,7 @@ The objective of this task is to create a stitched panorama from multiple overla
 
 ## Documentation
 
-[Documentation](https://github.com/Sreyas-J/VR_Assignment1_SreyasJanamanchi_IMT2022554/blob/main/Assignment1Report.pdf)
+[Documentation](https://github.com/Sreyas-J/VR_Assignment1_SreyasJanamanchi_IMT2022554/blob/main/IMT2022554.pdf)
 
 ```bash
 VRassignment1/
@@ -45,6 +45,7 @@ VRassignment1/
 - part2/out/: It contains images which display the matches and the final panaroma.
 - part2/part2.py: This is the python script for part2.
 - requirements.txt: Contains the packages available in the development conda environment.
+- IMT2022554.pdf: This is the report/documentation of the assignment.
 
 ## Run Locally
 
