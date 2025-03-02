@@ -85,7 +85,7 @@ def drawMatches(imgA, imgB, kpA, kpB, matches, status):
     return complete
 
 
-def stitch(imgA, imgB, ratio=0.6, re_proj=3.0):
+def stitch(imgA, imgB, ratio=0.6):
     # Detect keypoints and extract features
     kpA, fA = detectKP(imgA)
     kpB, fB = detectKP(imgB)
@@ -122,7 +122,13 @@ for file_name in os.listdir(output_folder):
 
 
 input_folder="in2"
-files = ["row-1-column-3.jpg","row-1-column-2.jpg","row-1-column-1.jpg"]
+NumberOfInputs=4
+
+files=[]
+for i in range(NumberOfInputs):
+    files.append(f"row-1-column-{NumberOfInputs-i}.jpg")
+
+print(files)
 path = [os.path.join(input_folder, f) for f in files]
 #loading the 1st image
 im1 = cv2.imread(path[0])

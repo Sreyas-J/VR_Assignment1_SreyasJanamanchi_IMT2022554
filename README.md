@@ -40,8 +40,8 @@ VRassignment1/
 - part1/coins.jpeg: Its an example input.
 - part1/coins2.jpeg: Its an example input.
 - part1/part1.py: This is the python script for part1.
-- part2/in1/: It contains a set of inputs.
-- part2/in2/: It contains a set of inputs.
+- part2/in1/: It contains a set of inputs (3 images).
+- part2/in2/: It contains a set of inputs (4 images).
 - part2/out/: It contains images which display the matches and the final panaroma.
 - part2/part2.py: This is the python script for part2.
 - requirements.txt: Contains the packages available in the development conda environment.
@@ -51,20 +51,20 @@ VRassignment1/
 Cloning the Github repository using SSH
 
 ```bash
-  git clone git@github.com:Sreyas-J/VRassignment1.git
+  git clone git@github.com:Sreyas-J/VR_Assignment1_SreyasJanamanchi_IMT2022554.git
 ```
 or
 
 Cloning the Github repository using HTTPS
 
 ```bash
-    git clone https://github.com/Sreyas-J/VRassignment1.git
+    git clone https://github.com/Sreyas-J/VR_Assignment1_SreyasJanamanchi_IMT2022554.git
 ```
 
 Installing the required packages in a conda environment
 
 ```bash
-    cd VRassignment1
+    cd VR_Assignment1_SreyasJanamanchi_IMT2022554
     conda create --name <env_name> --file requirements.txt
 ```
 
@@ -76,6 +76,10 @@ Running part1
 ```
 
 Running part2
+
+The inputs can be changed by updating the following variables:-
+- input_folder
+- NumberOfInputs
 
 ```bash
     cd part2
