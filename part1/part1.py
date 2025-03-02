@@ -111,8 +111,8 @@ def segment_count(img,circular_shapes):
 #clearing output folder
 clearOutput(["contours","outline","segmentedCoins"])
 
-
-img=cv2.imread("coins.jpeg")
+input_image="coins.jpeg"
+img=cv2.imread(input_image)
 
 if img is None:
     print("Error: Image not found or unable to load")

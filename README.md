@@ -71,6 +71,8 @@ Installing the required packages in a conda environment
 
 Running part1
 
+The input can be changed by updating the following variable: input_image
+
 ```bash
     cd part1
     python3 part1.py
